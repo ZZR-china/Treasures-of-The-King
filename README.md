@@ -1,6 +1,8 @@
 # Treasures-of-The-King 王之财宝
 code of the king 金皮卡
 
+<img src="http://7xqh0b.com1.z0.glb.clouddn.com/kenpika.jpg" width="512px" height="288px">
+
 ## 1、Blog：[戳这儿](http://www.zhangzirui.com/)
 
 ## 2、仓库
