@@ -1,0 +1,555 @@
+@padding: 10px;
+@960: 960px;
+html,
+body {
+    height: 100%;
+}
+// 页面顶部阴影
+// 下面这个简单的 css3 代码片段可以给网页加上漂亮的顶部阴影效果：
+body:before {
+          content: "";
+          position: fixed;
+          top: -10px;
+          left: 0;
+          width: 100%;
+          height: 10px;
+ 
+          -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+          -moz-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+          box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+ 
+          z-index: 100;
+}
+
+
+//样式重置代码
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    outline: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 62.5%;
+    line-height: 1;
+    font-family: Arial, Tahoma, sans-serif;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+strong {
+    font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img {
+    border: 0;
+    max-width: 100%;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.0em;
+    color: #333;
+}
+
+//清除浮动
+.clearfix:before,
+.container:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+
+/* IE 6/7 */
+
+.clearfix {
+    zoom: 1;
+}
+
+.container {
+    width: @960;
+    margin: 0 auto;
+}
+
+.padding(@padding) {
+    padding: @padding @padding;
+}
+
+.imgC {
+    .padding(@padding);
+    img {
+        // width: 100%;
+    }
+}
+
+//透明
+.transparent {
+    filter: alpha(opacity=50);
+    /* internet explorer */
+    -khtml-opacity: 0.5;
+    /* khtml, old safari */
+    -moz-opacity: 0.5;
+    /* mozilla, netscape */
+    opacity: 0.5;
+    /* fx, safari, opera */
+}
+
+// 黑白图像
+// 这段代码会让你的彩色照片显示为黑白照片，是不是很酷
+img.desaturate {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+}
+
+// 使用 :not() 在菜单上应用/取消应用边框
+// 先给每一个菜单项添加边框
+/* add border */
+.navli:not(:last-child) {
+  border-right: 1px solid #666;
+}
+
+// 当然，如果你的新元素有兄弟元素的话，也可以使用通用的兄弟选择符（~）：
+.nav li:first-child ~ li {
+
+  border-left: 1px solid #666;
+}
+
+//个性圆角
+.self-radius {
+    -webkit-border-radius: 4px 3px 6px 10px;
+    -moz-border-radius: 4px 3px 6px 10px;
+    -o-border-radius: 4px 3px 6px 10px;
+    border-radius: 4px 3px 6px 10px;
+}
+
+
+/* alternative syntax broken into each line */
+
+.self-radius {
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 3px;
+    -webkit-border-bottom-right-radius: 6px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright: 3px;
+    -moz-border-radius-bottomright: 6px;
+    -moz-border-radius-bottomleft: 10px;
+}
+
+//通用媒体查询 media query 
+
+/* Smartphones (portrait and landscape) ----------- */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    /* Styles */
+}
+
+
+/* Smartphones (landscape) ----------- */
+
+@media only screen and (min-width: 321px) {
+    /* Styles */
+}
+
+
+/* Smartphones (portrait) ----------- */
+
+@media only screen and (max-width: 320px) {
+    /* Styles */
+}
+
+
+/* iPads (portrait and landscape) ----------- */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    /* Styles */
+}
+
+
+/* iPads (landscape) ----------- */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    /* Styles */
+}
+
+//text-align
+.tc {
+    text-align: center;
+}
+
+.tl {
+    text-align: left;
+}
+
+.tr {
+    text-align: right;
+}
+
+//@font-face 模版
+@font-face {
+    font-family: 'MyWebFont';
+    src: url('webfont.eot');
+    /* IE9 Compat Modes */
+    src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('webfont.woff') format('woff'), /* Modern Browsers */
+    url('webfont.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('webfont.svg#svgFontName') format('svg');
+    /* Legacy iOS */
+}
+
+.font-face-demo {
+    font-family: 'MyWebFont', Arial, sans-serif;
+}
+
+//现代字体栈
+.font-family-demo {
+    font-family: 'Microsoft YaHei';
+    /* Times New Roman-based serif */
+    font-family: Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
+    /* A modern Georgia-based serif */
+    font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif," "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+    /*A more traditional Garamond-based serif */
+    font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+    /*The Helvetica/Arial-based sans serif */
+    font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /*The Verdana-based sans serif */
+    font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+    /*The Trebuchet-based sans serif */
+    font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+    /*The heavier "Impact" sans serif */
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
+    /*The monospace */
+    font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+}
+
+//table
+.tb-calendar {
+    table-layout: fixed;
+}
+
+td {
+    white-space: nowrap;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ccc;
+}
+
+//有趣的&
+.amp {
+    font-family: Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif;
+    font-style: italic;
+    font-weight: normal;
+}
+
+//垂直对齐
+.verticalcenter-transform {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.verticalcenter-table {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+//loading
+.loading:after {
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+    animation: ellipsis 2s infinite;
+    content: "\2026";
+    /* ascii code for the ellipsis character */
+}
+
+@keyframes ellipsis {
+    from {
+        width: 2px;
+    }
+    to {
+        width: 15px;
+    }
+}
+
+//文本渐变
+h2[data-text] {
+    position: relative;
+}
+
+h2[data-text]::after {
+    content: attr(data-text);
+    z-index: 10;
+    color: #e3e3e3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
+}
+
+//css三角形
+//利用border来写三角形代码，并且兼容IE6.
+
+/* create an arrow that points up */
+div.arrow-up {
+  width:0px;
+  height:0px;
+  border-left:5px solid transparent;  /* left arrow slant */
+  border-right:5px solid transparent; /* right arrow slant */
+  border-bottom:5px solid #2f2f2f; /* bottom, add background color here */
+  font-size:0px;
+  line-height:0px;
+}
+ 
+/* create an arrow that points down */
+div.arrow-down {
+  width:0px;
+  height:0px;
+  border-left:5px solid transparent;
+  border-right:5px solid transparent;
+  border-top:5px solid #2f2f2f;
+  font-size:0px;
+  line-height:0px;
+}
+ 
+/* create an arrow that points left */
+div.arrow-left {
+  width:0px;
+  height:0px;
+  border-bottom:5px solid transparent;  /* left arrow slant */
+  border-top:5px solid transparent; /* right arrow slant */
+  border-right:5px solid #2f2f2f; /* bottom, add background color here */
+  font-size:0px;
+  line-height:0px;
+}
+ 
+// create an arrow that points right
+div.arrow-right {
+  width:0px;
+  height:0px;
+  border-bottom:5px solid transparent;  /* left arrow slant */
+  border-top:5px solid transparent; /* right arrow slant */
+  border-left:5px solid #2f2f2f; /* bottom, add background color here */
+  font-size:0px;
+  line-height:0px;
+}
+
+// 逗号分隔的列表
+// 让html列表项看上去像一个真正的，用逗号分隔的列表：
+ul.ul-demo > li:not(:last-child)::after {
+  content: ",";
+}
+
+
+
+
+// 禁用鼠标事件
+// CSS3 新增的 pointer-events 让你能够禁用元素的鼠标事件，
+// 例如，一个连接如果设置了下面的样式就无法点击了。
+.disabled { pointer-events: none; }
+
+// 模糊文本
+// 简单但很漂亮的文本模糊效果，简单又好看！
+.blur {
+   color: transparent; text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+// 内部CSS3 盒阴影
+#mydiv { 
+    -moz-box-shadow: inset 2px 0 4px #000;
+    -webkit-box-shadow: inset 2px 0 4px #000;
+    box-shadow: inset 2px 0 4px #000;
+}
+
+// 外部CSS3 盒阴影
+#mydiv { 
+    -webkit-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.52);
+    -moz-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.52);
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.52);
+}
+
+
+// 使用属性选择器用于空链接
+// 当a元素没有文本值，但 href 属性有链接的时候显示链接：
+a[href^="http"]:empty::before {
+  content: attr(href);
+}
+
+// 继承 box-sizing
+// 让 box-sizing 继承 html：
+// 这样在插件或杠杆其他行为的其他组件中就能更容易地改变 box-sizing 了
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+//cursor 集合
+.cr-default {
+    cursor: default;
+}
+
+.cr-none {
+    cursor: none;
+}
+
+.cr-context-menu {
+    cursor: context-menu;
+}
+
+.cr-help {
+    cursor: help;
+}
+
+.cr-pointer {
+    cursor: pointer;
+}
+
+.cr-progress {
+    cursor: progress;
+}
+
+.cr-wait {
+    cursor: wait;
+}
+
+.cr-help {
+    cursor: help;
+}
+
+.cr-help {
+    cursor: help;
+}

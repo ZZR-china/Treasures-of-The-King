@@ -1,0 +1,28 @@
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+#autopublish
+#insecure
+meteor-platform
+mongo                   # The database Meteor supports right now
+session                 # Client-side reactive dictionary for your app
+jquery                  # Helpful client-side library
+tracker                 # Meteor's client-side reactive programming library
+standard-minifiers      # JS/CSS minifiers run for production mode
+es5-shim                # ECMAScript 5 compatibility for older browsers.
+ecmascript              # Enable ECMAScript2015+ syntax in app code
+
+#kadira:blaze-layout
+#kadira:flow-router
+iron:router
+fortawesome:fontawesome
+less
+twbs:bootstrap
+underscore
+sacha:spin
+ian:accounts-ui-bootstrap-3
+accounts-password
+audit-argument-checks

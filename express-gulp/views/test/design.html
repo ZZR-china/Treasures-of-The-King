@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button id="btn-modal" class="btn-modal">show modal</button>
+
+	<script type="text/javascript">
+
+	
+		var btn = document.getElementById('btn-modal');
+		
+		var singleton = function (fn){
+			var result;
+
+			return function (){
+				return result || (result =fn.apply(this, arguments));
+			}
+
+		}
+		var creatModal = singleton(function(){
+			return document.body.appendChild( document.createElement('div') );
+		});
+
+		btn.addEventListener('click', function(){
+			creatModal();
+		});
+
+
+
+
+	</script>
+</body>
+</html>

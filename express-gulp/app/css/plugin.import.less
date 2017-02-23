@@ -1,0 +1,245 @@
+@import 'useful.import.less';
+.inline{
+	display:inline-block;
+	*display:inline;
+	zoom: 1;
+}
+
+.boder-radius {
+    border-radius: 5px 5px 5px 5px;
+}
+
+.qr-backtotop{
+    position: fixed;
+    bottom: 109px;
+    left: 70%;
+    z-index: 19;
+    margin-left: 230px;
+    cursor:pointer;
+}
+
+.fr{
+	float:right;
+}
+
+.fl{
+	float:left;
+}
+
+.border-br{
+	border-right:1px solid @border-color;
+	border-bottom:1px solid @border-color;
+}
+
+.border-tl{
+	border-top:1px solid @border-color;
+	border-left:1px solid @border-color;
+}
+
+.ul-list{
+
+	ul{
+		li{
+			.inline;
+			text-align-last:auto;
+		}
+	}
+}
+
+.table-middle{
+	display:table-cell;
+	height:57px;
+	vertical-align:middle;
+}
+
+.table-bottom{
+	display:table-cell;
+	height:79px;
+	vertical-align:middle;
+}
+
+
+.imgWrap {
+		height:111px;
+		text-align-last:center;
+		>div{ 
+			width: 87px;
+			height: 111px;
+			.inline;
+			text-align: center;
+			text-align-last:auto;
+			font-size: 0;
+			 a {
+				display: block;
+				height: 100%;
+				text-align-last:auto;
+			}
+			
+			span {
+				display: inline-block;/*将行内元素改变为行内块元素显示*/
+				width: 1px;/*实现ＩＥ下可读效果*/
+				height: 100%;/*使用元素高度和图片容器高度一样*/
+				vertical-align: middle;/*垂直对齐*/
+			}
+
+			img {
+				vertical-align: middle;
+			}
+		}
+	} 
+	
+.imgWrap-footer {
+		height:79px;
+		>div{ 
+			.inline;
+			width: 60px;
+			height: 79px;
+			text-align: center;
+			text-align-last:auto;
+			font-size: 0;
+			 a {
+				display: block;
+				height: 100%;
+				text-align-last:auto;
+			}
+			
+			span {
+				display: inline-block;/*将行内元素改变为行内块元素显示*/
+				width: 1px;/*实现ＩＥ下可读效果*/
+				height: 100%;/*使用元素高度和图片容器高度一样*/
+				vertical-align: middle;/*垂直对齐*/
+			}
+
+			img {
+				vertical-align: middle;
+			}
+		}
+	} 
+
+
+
+.paddingnone{
+	padding-top:0 !important;
+	padding-bottom:0 !important;
+}
+
+.hide{
+	display:none;
+}
+
+.ul-nav{
+	ul{
+		.verticalcenter-table;
+		height:78px;
+		li{
+			font-size: 16px;
+			// font-weight: 600;
+			float: left;
+			cursor: pointer;
+			width: 123px;
+			text-align: center;
+			height:50px;
+			line-height:40px;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			padding-right: 12px;
+			padding-left: 12px;
+			.boder-radius;
+			
+			&:hover{
+				color: #fff;
+				// background-color: #c33131;
+				background:url(/images/R2.png) no-repeat;
+				background-size:100% 100%;
+				ul{
+					display:block;
+					background-color: transparent;
+					color: #fff;
+					li{
+						background-color: transparent;
+						background-image: none;
+						
+					}
+				}
+			}
+			ul{
+              position: absolute;
+              margin-left: -12px;
+              padding-top:24px;
+              z-index: 2;
+
+              display: none;
+              li{
+              	width:auto;
+              	min-width: 123px;
+              	height:auto;
+              	
+              	text-align:center;
+
+              	line-height:21px;
+              	padding-left:25px;
+              	padding-right:25px;
+              	white-space: nowrap;
+              	word-break: break-word;
+              	font-size: 12px;
+              	// background: url(/images/ollist.png) no-repeat;
+              	// background-size:100% 100%;
+              	
+              	
+              	.boder-radius;
+
+              	&:first-child{
+
+              	}
+              	&:hover{
+              		padding-left:5px;
+              		background-color:#000;
+              		list-style: inherit;
+              		list-style-position: inside;
+              		list-style-type: square;
+              	}
+              }
+			}
+		}
+	}
+}
+
+.fenye{
+	padding-top:15px;
+	height:50px;
+	text-align: right;
+}
+
+.normal-bg{
+	background: url(../images/newswhite.png) no-repeat;
+	background-size: 100% 100%;
+	p{
+
+	}
+
+}
+.active-bg{
+	background: url(../images/newsred.png) no-repeat;
+	background-size: 100% 100%;
+	p{
+		color:#fff;
+	}
+
+}
+
+.white-bg{
+	background: url(../images/bgwhite.png) no-repeat;
+	background-size: 100% 100%;
+	p{
+
+	}
+}
+
+.red-radius{
+	background: url(../images/bgred-r.png) no-repeat;
+	background-size: 100% 100%;
+	p{
+		color:#fff;
+
+	}
+}
