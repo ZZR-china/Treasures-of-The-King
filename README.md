@@ -1,8 +1,6 @@
 # Treasures-of-The-King 王之财宝
 code of the king 金皮卡
 
-#Github目录
-
 ## 1、Blog：[戳这儿](http://www.zhangzirui.com/)
 
 ## 2、仓库
